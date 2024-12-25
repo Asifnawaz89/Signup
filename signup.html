@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    <div class="signupcontainer">
+        <h1>Sign Up</h1>
+        <form id="signUpForm">
+            <input type="text"  id="username" placeholder="User Name" required>
+            <br>
+            <input type="emial"  id="signupemail" placeholder="Email" required>
+            <br>
+            <input type="password"  id="password" placeholder="Password" required>
+            <br>
+            <button id="submitSignUp">Sign Up</button>
+        </form>
+        <p>Already have account? <a href="index.html">Login</a></p>
+    </div>
+
+
+    <script>
+    document.getElementById("signUpForm").addEventListener("submitSignUp", function (event) {
+      event.preventDefault();
+
+      let userName = documet.getElementById("username").value.trim();
+      let userEmail = documet.getElementById("signupemail").value.trim();
+      let password = document.getElementById("password").value.trim();
+
+      if (!username || !email || !password) {
+        alert("Please fill in all fields.");
+      } else {
+        localStorage.setItem("username", username);
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
+        alert("You have signed up successfully!");
+      }
+    });
+
+
+
+
+    </script>
+</body>
+</html>
